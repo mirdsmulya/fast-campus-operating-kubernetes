@@ -1,0 +1,13 @@
+nameOverride: "hello-world-production"
+replicaCount: 3
+
+service: 
+  targetPort: 5000
+
+resources: 
+  limits:
+    cpu: 200m
+    memory: 128Mi
+  requests:
+    cpu: 200m
+    memory: 128Mi

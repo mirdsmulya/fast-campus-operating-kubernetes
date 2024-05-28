@@ -1,0 +1,13 @@
+nameOverride: "hello-world-staging"
+replicaCount: 2
+
+service: 
+  targetPort: 5000
+
+resources: 
+  limits:
+    cpu: 500m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 128Mi
