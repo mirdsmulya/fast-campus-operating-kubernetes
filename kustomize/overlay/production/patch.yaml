@@ -1,23 +1,16 @@
-apiVersion: apps/v1 
-kind: Deployment
-metadata:
-  name: hello-world
-spec:
-  selector:
-    matchLabels:
-      app: hello-world
-  replicas: 3
-  template:
-    spec:
-      containers:
-      - name: hello-world
-        resources:
-          requests:
-            cpu: 100m
-            memory: 90Mi
-          limits: 
-            cpu: 100m
-            memory: 90Mi
+- op: replace
+  path: /spec/replicas
+  value: 3  
+
+- op: replace
+  path: /spec/template/spec/containers/0/resources
+  value:
+    requests:
+      cpu: 100m
+      memory: 90Mi
+    limits: 
+      cpu: 100m
+      memory: 90Mi
 
 
 

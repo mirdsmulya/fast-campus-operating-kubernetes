@@ -19,13 +19,14 @@ spec:
         - containerPort: 5000
         envFrom: 
           - configMapRef:
-            name: hello-world-cm
+              name: hello-world-cm
         resources:
           requests:
             cpu: 50m
             memory: 90Mi
           limits: 
             cpu: 50m
+            memory: 90Mi
 
 
 
